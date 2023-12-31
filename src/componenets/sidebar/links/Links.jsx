@@ -1,15 +1,16 @@
-import Links from "../links/Links";
-import "../sidebar.scss";
-import ToggleButton from "../toggleButton/ToggleButton";
+const Links = () => {
+    const items = ["Homepage", "Services", "Portfolio","Contact", "About"];
 
 
-const Sidebar = () => {
-    return <div className="sidebar">
-        <div className="bg">
-        <Links/>
+
+    return (
+        <div className="links">
+        {items.map((item) => (
+        <a href={`#${item}`} key={item}>  
+        </a>  
+        ))}
         </div>
-        <ToggleButton/>
-    </div>;
+    )
 };
 
-export default Sidebar;
+export default Links;

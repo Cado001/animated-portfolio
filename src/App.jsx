@@ -1,5 +1,6 @@
 import Test from "./Text";
 import "./app.scss";
+import Hero from "./componenets/hero/Hero";
 import Navbar from "./componenets/navbar/Navbar";
 
 
@@ -8,6 +9,7 @@ const App = () => {
   return <div>
     <section id="Homepage ">
       <Navbar />
+      <Hero />
     </section>
     <section id="Services">Parallax</section>
     <section>Services</section>

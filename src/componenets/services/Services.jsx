@@ -1,5 +1,5 @@
 import "./services.scss"
-import { motion, useInView  } from "framer-motion"
+import { motion, useInView } from "framer-motion"
 
 
 const variants = {
@@ -17,27 +17,29 @@ const variants = {
             staggeredChildren: 0.1,
         },
     },
-}
+};
 
 
 
 const Services = () => {
 
-    const ref = useRef()
+    // const ref = useRef()
 
-    const isInView = useInView(ref, {margin: "-100px"})
+    // const isInView = useInView(ref, { margin: "-200px" })
+
+
 
     return (
-        <motion.div 
-        className="services" 
-        variants={variants} 
-        initial="initial" 
-        // animate="animate"
-        // whileInView="animate"
-        ref={ref}
-        animate={isInView ? "animate" : "initial"}
-        > 
-        
+        <motion.div
+            className="services"
+            variants={variants}
+            initial="initial"
+            // animate="animate"
+            whileInView="animate"
+            // ref={ref}
+            // animate={isInView && "animate"}
+        >
+
             <motion.div className="textContainer" variants={variants}>
                 <p>I focus on helping you brand grow
                     <br /> and investing in your future</p>
@@ -47,14 +49,14 @@ const Services = () => {
                 <div className="title">
                     <img src="/people.png" alt="" />
                     <h1>
-                        <b>Unique</b>  Ideas
+                        <motion.b whileHover={{color:"orange"}}>Unique</motion.b>  Ideas
                     </h1>
                 </div>
                 <div className="title">
                     <h1>
-                        <b> For Your </b>  Business.
+                        <motion.b whileHover={{color:"orange"}}> For Your </motion.b>  Business.
                     </h1>
-                <button className="customButton">WHAT WE DO?</button>
+                    <button className="customButton">WHAT WE DO?</button>
                 </div>
             </motion.div>
             <motion.div className="listContainer" variants={variants}>

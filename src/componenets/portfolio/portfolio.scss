@@ -1,18 +1,23 @@
 .portfolio {
-   position: relative;
-   
-    
-  .progress {
-        position: sticky;
-        top: 0;
-        left: 0;
-        padding-top: 50px;
-        text-align: center;
-        color: orange;
-        font-size: 36px;
+  position: relative;
+
+  // .progress {
+  //   position: sticky;
+  //   top: 0;
+  //   left: 0;
+  //   padding-top: 50px;
+  //   text-align: center;
+  //   // color: orange;
+  //   font-size: 36px;
 
     .progressBar {
-            
+      height: 10px;
+      background-color: white;
     }
+
+    .progressBar {
+      height: 10px;
+      background-color: white;
+    // }
   }
-} // Add the closing curly brace for the .portfolio selector here
+}

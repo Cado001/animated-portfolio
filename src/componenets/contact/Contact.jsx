@@ -1,5 +1,6 @@
+import { useRef } from "react";
 import "./contact.scss";
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 
 
 const variants = {
@@ -19,8 +20,13 @@ const variants = {
 
 
 const Contact = () => {
+
+    const ref = useRef()
+
+    const isInView = useInView(ref, {margin: "-100px" })
     return (
         <motion.div className="contact" variants={variants} initial="initial" whileInView="animate">
+            ref={ref}
             <motion.div className="textContainer" variants={variants}>
                 <motion.h1>Let's Work Together</motion.h1>
                 <p>Get in Touch</p>
@@ -40,12 +46,14 @@ const Contact = () => {
             <div className="formContainer">
                 <motion.div className="phoneSvg" 
                 intitial={{opacity:1}} 
-                whileInView={{opacity:0}} 
-                transition={{delay:5 , duration:1}}>
+                animate={isInView && {opacity:0}} 
+                transition={{duration:3}}>
             
                 <svg width="" viewBox="0 0 24 24" 
                 fill="none" 
                 intitial={{pathlength:0}}
+                whileInView={{pathlength:1}}
+                transition={{delay:3 , duration:1}}
                 xmlns="http://www.w3.org/2000/svg"><g 
                 id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" 
                 stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> 

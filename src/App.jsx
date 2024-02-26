@@ -5,6 +5,7 @@ import Navbar from "./componenets/navbar/Navbar";
 import Parallax from "./componenets/parallax/Parallax";
 import Portfolio from "./componenets/portfolio/Portfolio";
 import Services from "./componenets/services/Services";
+import Contact from "./componenets/contact/Contact";
 
 const App = () => {
   return <div>
@@ -16,7 +17,9 @@ const App = () => {
     <section><Services/></section>
     <section id="Portfoli0"><Parallax type="portfolio"/></section>
    <Portfolio />
-    <section id="Contact">Contact</section>
+    <section id="Contact">
+      <Contact />
+      </section>
    {/* <Test />
    <Test /> */}
   </div>;

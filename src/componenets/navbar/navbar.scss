@@ -33,6 +33,8 @@
 
 // }
 
+@import "../../app.scss";
+
 
 .navbar {
     height: 100px;
@@ -45,6 +47,13 @@
         align-items: center;
         justify-content: space-between;
         height: 100%; 
+
+        @include mobile{
+            display: none;
+            justify-content: flex-end;
+            padding: 20px;
+        }
+    
     }
 
     .title {
@@ -55,6 +64,11 @@
         display: inline-block;
         justify-content: space-between;
         margin: 150px;
+
+        @include mobile{
+            display: none;
+        }
+    
     }
 
     .social {

@@ -1,4 +1,3 @@
-import Test from "./Text";
 import "./app.scss";
 import Hero from "./componenets/hero/Hero";
 import Navbar from "./componenets/navbar/Navbar";
@@ -6,9 +5,11 @@ import Parallax from "./componenets/parallax/Parallax";
 import Portfolio from "./componenets/portfolio/Portfolio";
 import Services from "./componenets/services/Services";
 import Contact from "./componenets/contact/Contact";
+import Cursor from "./componenets/cursor/Cursor";
 
 const App = () => {
   return <div>
+      <Cursor />
     <section id="Homepage ">
       <Navbar />
       <Hero />
@@ -20,8 +21,7 @@ const App = () => {
     <section id="Contact">
       <Contact />
       </section>
-   {/* <Test />
-   <Test /> */}
+  
   </div>;
 };  
 
